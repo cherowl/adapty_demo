@@ -10,7 +10,7 @@ class Device(models.Model):
         VISION = "visionOS"
         ANDROID = "Android"
 
-    profile_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    device_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     app_version = models.CharField(max_length=10)
     platform = models.CharField(choices=Platform, max_length=25)
     timezone = models.CharField(max_length=100)
