@@ -3,7 +3,12 @@ from django.db import models
 
 
 class Device(models.Model):
-    Platform = models.TextChoices("iOS", "macOS", "iPadOS", "visionOS", "Android")
+    class Platform(models.TextChoices):
+        IOS = "iOS"
+        MAC = "macOS"
+        IPAD = "iPadOS"
+        VISION = "visionOS"
+        ANDROID = "Android"
 
     profile_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     app_version = models.CharField(max_length=10)
