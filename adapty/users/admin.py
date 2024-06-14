@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from users.models import Device, User
+
+admin.site.register(Device)
+admin.site.register(User)
