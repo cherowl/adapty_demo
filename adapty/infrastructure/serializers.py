@@ -1,7 +1,7 @@
 import pytz
 
 from rest_framework import serializers, validators
-from users.models import Device, User
+from infrastructure.models import Device, User
 
 import logging
 

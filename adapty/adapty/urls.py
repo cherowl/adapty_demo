@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from users.views import DeviceViewSet, UserViewSet
+from infrastructure.views import DeviceViewSet, UserViewSet
 
 
 router = routers.SimpleRouter()
