@@ -56,6 +56,24 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
+LOGGING = {
+    "version": 1,  # the dictConfig format version
+    "disable_existing_loggers": True,  # retain the default loggers
+    "loggers": {
+        "": {
+            "level": "DEBUG",
+            "handlers": ["file"],
+        },
+    },
+    "handlers": {
+        "file": {
+            "class": "logging.FileHandler",
+            "filename": "degub.log",
+            "level": "DEBUG",
+        },
+    },
+}
+
 ROOT_URLCONF = 'adapty.urls'
 
 TEMPLATES = [
